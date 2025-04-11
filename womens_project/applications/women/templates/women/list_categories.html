@@ -1,0 +1,8 @@
+
+{% for item in categories%}
+{% if item.slug == category_selected %}
+<li class="selected">{{ item.name }}</li>
+{% else %}
+<li><a href="{{ item.get_absolute_url }}">{{ item.name }}</a></li>
+{% endif  %}
+{% endfor %}
